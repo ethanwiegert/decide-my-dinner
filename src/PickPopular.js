@@ -8,11 +8,16 @@ import { Link, useHistory } from "react-router-dom";
 
 
 const Restaraunts=[
-  "Buffalo Wild Wings", 
+  "Starbucks", 
   "McDonalds",
+  "Subway",
+  "Burger King",
   "Taco Bell",
-  "Shake Shack",
-  "Chipotle"
+  "Wendy's",
+  "Dunkin' Donuts",
+  "Chick-fil-A",
+  "Domino's",
+  "Pizza Hut"
 ]
 
 function getRandomInt(max) {
