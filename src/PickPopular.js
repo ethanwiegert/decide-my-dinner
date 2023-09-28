@@ -37,7 +37,7 @@ function PickPopular() {
   return(
     <div>
 
-      <div className="row pt-5 pb-5">
+      <div className="row pb-5">
       <div className="d-flex justify-content-center bg-dark text-white p-5">
     <h1>Decide Dinner</h1>
     </div>
