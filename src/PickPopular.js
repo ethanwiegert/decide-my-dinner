@@ -44,13 +44,13 @@ function PickPopular() {
     </div>
 
     <div className="row">
-    <div className="d-flex justify-content-center pt-5 pb-5">
+    <div className="d-flex justify-content-center pt-3 pb-3">
  <h3>Tonight is: {Restaraunts[NewRestaraunt()]}!</h3>
  </div>
  </div>
 
  <div className="row">
-  <div className="d-flex justify-content-center pt-5">
+  <div className="d-flex justify-content-center pt-3">
    
  <p>Not what you were hoping?</p>
  </div>
@@ -60,7 +60,7 @@ function PickPopular() {
 <div className="row">
   <div className="d-flex justify-content-center">
    
- <button type="button" className="col-3 btn btn-dark" onClick={()=>history.go("/")}>Choose Again</button>
+ <button type="button" className="col-4 btn btn-dark" onClick={()=>history.go("/")}>Choose Again</button>
  </div>
  </div>
 
