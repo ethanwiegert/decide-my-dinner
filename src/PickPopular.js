@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import { Link, useHistory } from "react-router-dom";
 
+import NavigationBar from './NavigationBar';
+
 //Buffalo Wild Wings, McDonalds, Taco Bell, Shake Shack, Chipotle
 
 
@@ -40,8 +42,12 @@ function PickPopular() {
       <div className="row pb-5">
       <div className="d-flex justify-content-center bg-dark text-white p-5">
     <h1>Decide Dinner</h1>
+  
     </div>
+    <NavigationBar/>
     </div>
+
+
 
     <div className="row">
     <div className="d-flex justify-content-center pt-3 pb-3">
