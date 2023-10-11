@@ -5,6 +5,7 @@ import NavigationBar from "./NavigationBar";
 
 
 function UseMyList(){
+    const history=useHistory()
     
     
 
@@ -32,7 +33,7 @@ function UseMyList(){
         list.forEach((name)=>count++)
         const picked=getRandomInt(count)
         setRestaurant(allChoices[picked].name)
-       document.getElementById("result").innerHTML=`${restaurant}`
+       document.getElementById("result").innerHTML=`Your choice is: ${restaurant}`
       }
   
     return (
@@ -47,14 +48,16 @@ function UseMyList(){
     </div>
     </div>
     
-    
-        <h1>Add restaurants:</h1>
+    <div className="d-flex justify-content-center">
+        <h2>Add restaurants:</h2>
+        </div>
+        <div className="d-flex justify-content-center">
         <form onSubmit={submitHandler}>
         <input
           value={name}
           onChange={e => setName(e.target.value)}
         />
-        <button onClick={() => {
+        <button className="btn btn-success" onClick={() => {
             
           setList([
             ...list,
@@ -64,10 +67,17 @@ function UseMyList(){
         <br/>
         <h3>Your List:</h3>
         <ol>
+            
         {list.map(item => (
-          <li >
+            <div className="card w-75">
+            <div className="row">
+        <div className="col-2">
+          <li>
             {item.name}{' '}
-            <button onClick={() => {
+          </li>
+          </div>
+          <div className="col-6">
+          <button className="btn btn-danger col-3" onClick={() => {
               setList(
                 list.filter(a =>
                   a.name !== item.name
@@ -76,14 +86,29 @@ function UseMyList(){
             }}>
               Delete
             </button>
-          </li>
+            </div>
+          </div>
+          </div>
         ))}
+        
       </ol>
       <br/>
-      <h4>Decide from this list</h4>
-      <button type="submit button">Choose</button>
+      <div className="d-flex justify-content-center">
+      <button type="submit button" className="col-6 btn btn-lg btn-dark">Choose</button>
+      </div>
       </form>
-     <p id="result"></p>
+      </div>
+      
+      <br/>
+      <div className="d-flex justify-content-center">
+     <h3 id="result"></h3>
+     </div>
+     <br/>
+
+     <div className="d-flex justify-content-center">
+      <button type="button" className="col-3 btn btn-lg btn-warning" onClick={()=>history.go(0)}>Start Over</button>
+      </div>
+
  </div>
 //conditionally render chosen restaurant
 
