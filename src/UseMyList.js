@@ -11,6 +11,7 @@ function UseMyList(){
     const [name, setName] = useState('');
     const [list, setList] = useState([]);
     const[allChoices, setAllChoices]=useState()
+    const [restaurant, setRestaurant]=useState("")
 
     
 
@@ -20,9 +21,9 @@ function UseMyList(){
         return Math.floor(Math.random() * max);
       }
       
-      function NewRestaraunt(){
-          return getRandomInt(list.length)
-      }
+
+
+   
 
       const submitHandler = (event) => {
         event.preventDefault();
@@ -30,9 +31,8 @@ function UseMyList(){
         let count=0
         list.forEach((name)=>count++)
         const picked=getRandomInt(count)
-        console.log(count)
-        console.log(list.length)
-        console.log(allChoices[picked])
+        setRestaurant(allChoices[picked].name)
+       document.getElementById("result").innerHTML=`${restaurant}`
       }
   
     return (
@@ -83,8 +83,9 @@ function UseMyList(){
       <h4>Decide from this list</h4>
       <button type="submit button">Choose</button>
       </form>
+     <p id="result"></p>
  </div>
-
+//conditionally render chosen restaurant
 
       
     );
