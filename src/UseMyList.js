@@ -67,7 +67,7 @@ function UseMyList(){
         {list.map(item => (
             <div className="card">
             <div className="row card-body d-flex justify-content-center">
-        <div className="col-6 mr-auto">
+        <div className="col-6">
           <li>
             {item.name}{' '}
           </li>
