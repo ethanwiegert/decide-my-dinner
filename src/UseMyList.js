@@ -69,15 +69,15 @@ function UseMyList(){
         <ol>
             
         {list.map(item => (
-            <div className="card w-75">
-            <div className="row">
-        <div className="col-2">
+            <div className="card">
+            <div className="row card-body d-flex justify-content-center">
+        <div className="col-6 mr-auto">
           <li>
             {item.name}{' '}
           </li>
           </div>
           <div className="col-6">
-          <button className="btn btn-danger col-3" onClick={() => {
+          <button className="btn btn-danger" onClick={() => {
               setList(
                 list.filter(a =>
                   a.name !== item.name

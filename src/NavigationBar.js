@@ -19,17 +19,6 @@ function NavigationBar(){
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/pick-popular">Pick Popular</Nav.Link>
             <Nav.Link href="/use-my-list">Use My List</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/use-my-list">Use My List</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>
