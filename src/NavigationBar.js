@@ -10,19 +10,18 @@ function NavigationBar(){
     const history=useHistory()
     return(
         
-<Navbar expand="lg" className="bg-body-tertiary">
-      <Container>
-        <Navbar.Brand href="#home">Decide My Dinner</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/pick-popular">Pick Popular</Nav.Link>
-            <Nav.Link href="/use-my-list">Use My List</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="/">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/pick-popular">Pick Popular</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/use-my-list">Use My List</a>
+  </li>
+
+</ul>
   
   )
 }
