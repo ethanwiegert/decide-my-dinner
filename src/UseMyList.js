@@ -5,11 +5,12 @@ import NavigationBar from "./NavigationBar";
 
 
 function UseMyList(){
-    let nextId = 0;
+    
     
 
     const [name, setName] = useState('');
     const [list, setList] = useState([]);
+    const[allChoices, setAllChoices]=useState()
 
     
 
@@ -21,6 +22,17 @@ function UseMyList(){
       
       function NewRestaraunt(){
           return getRandomInt(list.length)
+      }
+
+      const submitHandler = (event) => {
+        event.preventDefault();
+        setAllChoices(list);
+        let count=0
+        list.forEach((name)=>count++)
+        const picked=getRandomInt(count)
+        console.log(count)
+        console.log(list.length)
+        console.log(allChoices[picked])
       }
   
     return (
@@ -37,21 +49,23 @@ function UseMyList(){
     
     
         <h1>Add restaurants:</h1>
+        <form onSubmit={submitHandler}>
         <input
           value={name}
           onChange={e => setName(e.target.value)}
         />
         <button onClick={() => {
+            
           setList([
             ...list,
-            { id: nextId++, name: name }
+            { name: name }
           ]);
         }}>Add</button>
         <br/>
         <h3>Your List:</h3>
-        <ul>
+        <ol>
         {list.map(item => (
-          <li key={item.id}>
+          <li >
             {item.name}{' '}
             <button onClick={() => {
               setList(
@@ -64,11 +78,11 @@ function UseMyList(){
             </button>
           </li>
         ))}
-      </ul>
+      </ol>
       <br/>
       <h4>Decide from this list</h4>
-      <button>Choose</button>
-     
+      <button type="submit button">Choose</button>
+      </form>
  </div>
 
 
