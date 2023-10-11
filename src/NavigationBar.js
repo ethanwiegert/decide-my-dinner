@@ -12,13 +12,13 @@ function NavigationBar(){
         
 <ul class="nav justify-content-center">
   <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="/">Home</a>
+    <a class="nav-link disabled" aria-current="page" href="/">Home</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="/pick-popular">Pick Popular</a>
+    <a class="nav-link disabled" href="/pick-popular">Pick Popular</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="/use-my-list">Use My List</a>
+    <a class="nav-link disabled" href="/use-my-list">Use My List</a>
   </li>
 
 </ul>

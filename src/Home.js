@@ -3,7 +3,8 @@ import './App.css';
 import { Link, useHistory } from "react-router-dom";
 
 import NavigationBar from './NavigationBar';
-
+import UseMyList from './UseMyList';
+import PickPopular from './PickPopular';
 function Home(){
     return(
         <div>
@@ -26,9 +27,17 @@ function Home(){
 <h5>Pick Popular</h5>
 <p>Uses a generated list of the top 10 restaraunts in the United States based on revenue in 2022.</p>
 <br/>
+<PickPopular/>
+<br/>
 <h5>Use My List</h5>
 <p>Helps you choose based on restaraunts you want.</p>
+<br/>
+<UseMyList/>
+<br/>
+
+
         </div>
+        
     )
 }
 

@@ -25,10 +25,10 @@ function App() {
     <Route exact path="/">
    <Home/>
    </Route>
-   <Route exact path="/pick-popular">
+   <Route  path="/pick-popular">
    <PickPopular/>
    </Route>
-   <Route exact path="/use-my-list">
+   <Route  path="/use-my-list">
    <UseMyList/>
    </Route>
    </Switch>

@@ -28,25 +28,21 @@ function UseMyList(){
 
       const submitHandler = (event) => {
         event.preventDefault();
+        if(list.length>2){
         setAllChoices(list);
         let count=0
         list.forEach((name)=>count++)
         const picked=getRandomInt(count)
         setRestaurant(allChoices[picked].name)
-       document.getElementById("result").innerHTML=`Your choice is: ${restaurant}`
+       document.getElementById("result").innerHTML=`Your choice is: ${restaurant}`}
       }
   
     return (
+        
       <div>
-          <div>
-    <div className="row pb-5">
-      <div className="d-flex justify-content-center bg-dark text-white p-5">
-    <h1>Decide Dinner</h1>
-  
-    </div>
-    <NavigationBar/>
-    </div>
-    </div>
+       
+    
+    
     
     <div className="d-flex justify-content-center">
         <h2>Add restaurants:</h2>
@@ -101,7 +97,7 @@ function UseMyList(){
       
       <br/>
       <div className="d-flex justify-content-center">
-     <h3 id="result"></h3>
+     <h3 id="result">Your choice will appear here.</h3>
      </div>
      <br/>
 
