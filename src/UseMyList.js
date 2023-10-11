@@ -65,8 +65,8 @@ function UseMyList(){
         <ol>
             
         {list.map(item => (
-            <div className="card">
-            <div className="row card-body d-flex justify-content-center">
+            
+            <div className="row d-flex justify-content-center">
         <div className="col-6">
           <li>
             {item.name}{' '}
@@ -82,9 +82,10 @@ function UseMyList(){
             }}>
               Delete
             </button>
+           
             </div>
           </div>
-          </div>
+           
         ))}
         
       </ol>
