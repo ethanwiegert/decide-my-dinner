@@ -21,12 +21,12 @@ function Home(){
 <h5>Pick Popular</h5>
 <p>Uses a generated list of the top 10 restaraunts in the United States based on revenue in 2022.</p>
 <br/>
-<PickPopular/>
+
 <br/>
 <h5>Use My List</h5>
 <p>Helps you choose based on restaraunts you want.</p>
 <br/>
-<UseMyList/>
+
 <br/>
 
 

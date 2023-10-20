@@ -5,6 +5,7 @@ import { Route, Switch } from "react-router-dom";
 import PickPopular from './PickPopular';
 import Home from './Home';
 import UseMyList from './UseMyList';
+import NotFound from './NotFound';
 
 
 
@@ -30,6 +31,9 @@ function App() {
    </Route>
    <Route exact path="/">
    <Home/>
+   </Route>
+   <Route >
+   <NotFound/>
    </Route>
    </Switch>
    </Router>
