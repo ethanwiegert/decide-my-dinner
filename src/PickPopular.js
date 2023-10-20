@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { Link, useHistory } from "react-router-dom";
 
-import NavigationBar from './NavigationBar';
+import Header from './Header';
 
 //Buffalo Wild Wings, McDonalds, Taco Bell, Shake Shack, Chipotle
 
@@ -37,7 +37,13 @@ function PickPopular() {
   const history=useHistory()
   
   return(
+
     <div>
+      <div>
+    
+   <Header/>
+    </div>
+    
 
      
     <div className="row">

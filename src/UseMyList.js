@@ -1,7 +1,7 @@
 import React from "react";
 import {useState, useEffect} from "react"
 import {useHistory} from "react-router-dom"
-import NavigationBar from "./NavigationBar";
+import Header from "./Header";
 
 
 function UseMyList(){
@@ -41,7 +41,7 @@ function UseMyList(){
         
       <div>
        
-    
+    <Header/>
     
     
     <div className="d-flex justify-content-center">

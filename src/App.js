@@ -22,14 +22,14 @@ function App() {
     <>
 <Router>
   <Switch>
-    <Route exact path="/">
-   <Home/>
-   </Route>
    <Route  path="/pick-popular">
    <PickPopular/>
    </Route>
    <Route  path="/use-my-list">
    <UseMyList/>
+   </Route>
+   <Route exact path="/">
+   <Home/>
    </Route>
    </Switch>
    </Router>

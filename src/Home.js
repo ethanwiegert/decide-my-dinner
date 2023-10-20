@@ -2,24 +2,18 @@ import React from 'react';
 import './App.css';
 import { Link, useHistory } from "react-router-dom";
 
-import NavigationBar from './NavigationBar';
+import Header from './Header';
 import UseMyList from './UseMyList';
 import PickPopular from './PickPopular';
 function Home(){
     return(
-        <div>
-  <div>
 
-<div className="row pb-5">
-<div className="d-flex justify-content-center bg-dark text-white p-5">
-<h1>Decide Dinner</h1>
-
-</div>
-<NavigationBar/>
-</div>
+<div>
+<Header/>
 
 
-</div>
+
+
 <h3>Let Us Decide For You</h3>
 <br/>
 <h4>Main Features</h4>
