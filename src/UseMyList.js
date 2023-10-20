@@ -102,9 +102,7 @@ function UseMyList(){
      </div>
      <br/>
 
-     <div className="d-flex justify-content-center">
-      <button type="button" className="col-3 btn btn-lg btn-warning" onClick={()=>history.go(0)}>Start Over</button>
-      </div>
+    
 
  </div>
 //conditionally render chosen restaurant

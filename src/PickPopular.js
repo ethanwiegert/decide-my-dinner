@@ -1,4 +1,4 @@
-import React from 'react';
+import {React, useState} from 'react';
 import './App.css';
 import { Link, useHistory } from "react-router-dom";
 
@@ -35,6 +35,7 @@ function PickPopular() {
  
 
   const history=useHistory()
+  const [choice, setChoice]=useState(Restaraunts[NewRestaraunt()])
   
   return(
 
@@ -48,7 +49,7 @@ function PickPopular() {
      
     <div className="row">
     <div className="d-flex justify-content-center pt-3 pb-3">
- <h3>Tonight is: {Restaraunts[NewRestaraunt()]}!</h3>
+ <h3>Tonight is: {choice}!</h3>
  </div>
  </div>
 
@@ -62,7 +63,7 @@ function PickPopular() {
 
 <div className="row">
   <div className="d-flex justify-content-center">
- <button type="button" className="col-6 btn btn-lg btn-dark" onClick={()=>history.go(0)}>Choose Again</button>
+ <button type="button" className="col-6 btn btn-lg btn-dark" onClick={()=>setChoice(Restaraunts[NewRestaraunt()])}>Choose Again</button>
  
  </div>
  </div>
