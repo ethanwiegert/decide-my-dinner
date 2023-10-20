@@ -62,7 +62,7 @@ function PickPopular() {
 
 <div className="row">
   <div className="d-flex justify-content-center">
- <button type="button" className="col-6 btn btn-lg btn-dark" onClick={()=>history.go("/")}>Choose Again</button>
+ <button type="button" className="col-6 btn btn-lg btn-dark" onClick={()=>history.go(0)}>Choose Again</button>
  
  </div>
  </div>
