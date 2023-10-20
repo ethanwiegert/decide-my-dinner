@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, NavLink } from "react-router-dom";
+
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -20,13 +21,13 @@ function Header(){
     </div>
     <ul class="nav justify-content-center">
   <li class="nav-item">
-    <a class="nav-link " aria-current="page" href="/">Home</a>
+    <NavLink to="/">Home</NavLink>
   </li>
   <li class="nav-item">
-    <a class="nav-link " href="/pick-popular">Pick Popular</a>
+  <NavLink to="/pick-popular">Pick Popular</NavLink>
   </li>
   <li class="nav-item">
-    <a class="nav-link " href="/use-my-list">Use My List</a>
+  <NavLink to="/use-my-list">Use My List</NavLink>
   </li>
 
 </ul>
