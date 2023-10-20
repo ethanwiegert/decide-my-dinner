@@ -15,18 +15,20 @@ function Header(){
       <div>
     
     <div className="row pb-5">
-    <div className="d-flex justify-content-center bg-dark text-white p-5">
+    <div className="d-flex justify-content-evenly bg-dark text-white p-5">
     <h1>Decide Dinner</h1>
     
     </div>
-    <ul class="nav justify-content-center">
-  <li class="nav-item">
+    <ul className="nav d-flex justify-content-evenly">
+  <li className="nav-item">
+    
     <NavLink to="/">Home</NavLink>
+    
   </li>
-  <li class="nav-item">
+  <li className="nav-item">
   <NavLink to="/pick-popular">Pick Popular</NavLink>
   </li>
-  <li class="nav-item">
+  <li className="nav-item">
   <NavLink to="/use-my-list">Use My List</NavLink>
   </li>
 
