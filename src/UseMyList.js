@@ -91,7 +91,7 @@ function UseMyList(){
       </ol>
       <br/>
       <div className="d-flex justify-content-center">
-      <button type="submit button" className="col-6 btn btn-lg btn-dark">Choose</button>
+      <button type="submit button" className="col-6 btn btn-lg button-flip">Choose</button>
       </div>
       </form>
       </div>
