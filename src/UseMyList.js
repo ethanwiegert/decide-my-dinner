@@ -44,7 +44,7 @@ function UseMyList(){
     <Header/>
     
     
-    <div className="d-flex justify-content-center">
+    <div className="d-flex justify-content-center pt-4">
         <h2>Add restaurants:</h2>
         </div>
         <div className="d-flex justify-content-center">

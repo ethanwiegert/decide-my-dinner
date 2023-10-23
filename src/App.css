@@ -82,9 +82,7 @@
   filter: blur(20px);
 }
 
-.button-flip:hover::after {
-  filter: blur(30px);
-}
+
 
 .button-flip:hover::before {
   transform: rotate(-180deg);
