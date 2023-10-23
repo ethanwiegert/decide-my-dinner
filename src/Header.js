@@ -21,7 +21,7 @@ function Header(){
     </div>
 
     <div className="d-flex justify-content-center">
-    <h4 className="fst-italic">Let Us Decide For You</h4>
+    <h5 className="fst-italic">Let Us Decide For You</h5>
     </div>
     
     </div>
@@ -42,7 +42,7 @@ function Header(){
           <a class="nav-link" href="/use-my-list">Use My List</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
+          <a class="nav-link" href="/find-my-dinner">Find My Dinner</a>
         </li>
       </ul>
     </div>

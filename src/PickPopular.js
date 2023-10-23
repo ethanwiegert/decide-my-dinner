@@ -48,7 +48,7 @@ function PickPopular() {
 
      
     <div className="row pt-3">
-    <div className="d-flex justify-content-center pt-3 pb-3">
+    <div className="d-flex justify-content-center pb-3">
  <h3>Tonight is: {choice}!</h3>
  </div>
  </div>

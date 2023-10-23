@@ -21,6 +21,8 @@ function Home(){
 <p>Uses a generated list of the top 10 restaraunts in the United States based on revenue in 2022.</p>
 <h5>Use My List</h5>
 <p>Helps you choose based on restaraunts you want.</p>
+<h5>Find My Dinner</h5>
+<p>Generates a list based on </p>
 
 </div>
 

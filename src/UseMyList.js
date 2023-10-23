@@ -44,7 +44,7 @@ function UseMyList(){
     <Header/>
     
     
-    <div className="d-flex justify-content-center pt-4">
+    <div className="d-flex justify-content-center pt-3">
         <h2>Add restaurants:</h2>
         </div>
         <div className="d-flex justify-content-center">
@@ -62,17 +62,17 @@ function UseMyList(){
         }}>Add</button>
         <br/>
         <h3>Your List:</h3>
-        <ol>
+        
             
         {list.map(item => (
             
             <div className="row d-flex justify-content-center">
         <div className="col-6">
-          <li>
+          <p>
             {item.name}{' '}
-          </li>
+          </p>
           </div>
-          <div className="col-6">
+          <div className="col-6 pb-2">
           <button className="btn btn-danger" onClick={() => {
               setList(
                 list.filter(a =>
@@ -88,7 +88,7 @@ function UseMyList(){
            
         ))}
         
-      </ol>
+      
       <br/>
       <div className="d-flex justify-content-center">
       <button type="submit button" className="col-6 btn btn-lg button-flip">Choose</button>

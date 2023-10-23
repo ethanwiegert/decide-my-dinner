@@ -5,6 +5,7 @@ import { Route, Switch } from "react-router-dom";
 import PickPopular from './PickPopular';
 import Home from './Home';
 import UseMyList from './UseMyList';
+import FindMyDinner from './FindMyDinner';
 import NotFound from './NotFound';
 
 
@@ -28,6 +29,9 @@ function App() {
    </Route>
    <Route  path="/use-my-list">
    <UseMyList/>
+   </Route>
+   <Route path="/find-my-dinner">
+    <FindMyDinner />
    </Route>
    <Route exact path="/">
    <Home/>
