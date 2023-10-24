@@ -26,27 +26,24 @@ function Header(){
     
     </div>
 
-<div classname="row">
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/">Home</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/pick-popular">Pick Popular</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/use-my-list">Use My List</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/find-my-dinner">Find My Dinner</a>
-        </li>
-      </ul>
+<div className="row">
+<nav className="navbar navbar-expand navbar-light bg-light">
+  <div className="container-fluid d-flex justify-content-center">
+    <a className="navbar-brand" href="/">Home</a>
     </div>
-  </div>
+
+      <div className="container-fluid d-flex justify-content-center">
+          <a className="nav-link active" aria-current="page" href="/pick-popular">Pick Popular</a>
+        </div>
+        <div className="container-fluid d-flex justify-content-center">
+          <a className="nav-link" href="/use-my-list">Use My List</a>
+        </div>
+        <div className="container-fluid d-flex justify-content-center">
+          <a className="nav-link disabled" href="/find-my-dinner">Find My Dinner</a>
+        </div>
+      
+    
+ 
 </nav>
 </div>
 
