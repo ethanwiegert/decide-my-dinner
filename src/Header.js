@@ -36,10 +36,10 @@ function Header(){
           <a className="nav-link active" aria-current="page" href="/pick-popular">Pick Popular</a>
         </div>
         <div className="container-fluid d-flex justify-content-center">
-          <a className="nav-link" href="/use-my-list">Use My List</a>
+          <a className="nav-link active" href="/use-my-list">Use My List</a>
         </div>
         <div className="container-fluid d-flex justify-content-center">
-          <a className="nav-link disabled" href="/find-my-dinner">Find My Dinner</a>
+          <a className="nav-link active" href="/find-my-dinner">Find My Dinner</a>
         </div>
       
     
