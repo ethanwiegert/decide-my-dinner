@@ -9,7 +9,9 @@ import OpenAI from "openai"
 
 
 function FindMyDinner(){
-    const openai = new OpenAI();
+    const openai = new OpenAI({
+        apiKey: process.env.REACT_APP_OPENAI_API_KEY,
+      });
 
 
     const [location, setLocation] = useState('');
@@ -19,6 +21,7 @@ async function handleSubmit(location) {
   const completion = await openai.chat.completions.create({
     messages: [{ role: "system", content: `Create a list with clickable links of the top 5 rated restaurants in ${location} and include their cuisine style.` }],
     model: "gpt-3.5-turbo",
+    temperature: 1,
   });
 
   setResponse(completion)
