@@ -1,15 +1,28 @@
 import React from 'react';
 import './App.css';
-import {useState, useEffect} from "react";
-import { Link, useHistory, NavLink } from "react-router-dom";
+import {useState} from "react";
+
 import Header from './Header';
+
+import OpenAI from "openai"
+
 
 
 function FindMyDinner(){
+    const openai = new OpenAI();
+
+
     const [location, setLocation] = useState('');
     const [response, setResponse] = useState('')
 
+async function handleSubmit(location) {
+  const completion = await openai.chat.completions.create({
+    messages: [{ role: "system", content: `Create a list with clickable links of the top 5 rated restaurants in ${location} and include their cuisine style.` }],
+    model: "gpt-3.5-turbo",
+  });
 
+  setResponse(completion)
+}
 
 
 
@@ -36,7 +49,8 @@ return(
                 
            
             
-        <form>
+        <form onSubmit={handleSubmit}>
+            <label></label>
         <input id="location"
           value={location}
           onChange={(event) => setLocation(event.target.value)}
