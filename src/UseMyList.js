@@ -1,5 +1,5 @@
 import React from "react";
-import {useState, useEffect} from "react"
+import {useState} from "react"
 import {useHistory} from "react-router-dom"
 import Header from "./Header";
 
@@ -11,7 +11,6 @@ function UseMyList(){
 
     const [name, setName] = useState('');
     const [list, setList] = useState([]);
-    const[allChoices, setAllChoices]=useState()
     const [restaurant, setRestaurant]=useState("")
 
     
@@ -30,10 +29,9 @@ function UseMyList(){
         event.preventDefault();
         if(list.length>2){
         setAllChoices(list);
-        let count=0
-        list.forEach((name)=>count++)
+        let count=list.length
         const picked=getRandomInt(count)
-        setRestaurant(allChoices[picked].name)
+        setRestaurant(list[picked].name)
        document.getElementById("result").innerHTML=`Your choice is: ${restaurant}`}
       }
   
@@ -91,14 +89,14 @@ function UseMyList(){
       
       <br/>
       <div className="d-flex justify-content-center">
-      <button type="submit button" className="col-6 btn btn-lg button-flip">Choose</button>
+      <button type="submit button" name="submit" className="col-6 btn btn-lg button-flip">Choose</button>
       </div>
       </form>
       </div>
       
       <br/>
       <div className="d-flex justify-content-center">
-     <h3 id="result">Your choice will appear here.</h3>
+     <h4 id="result"></h4>
      </div>
      <br/>
 
