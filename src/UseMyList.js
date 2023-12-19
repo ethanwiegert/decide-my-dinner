@@ -28,7 +28,7 @@ function UseMyList(){
       const submitHandler = (event) => {
         event.preventDefault();
         if(list.length>2){
-        setAllChoices(list);
+      
         let count=list.length
         const picked=getRandomInt(count)
         setRestaurant(list[picked].name)
