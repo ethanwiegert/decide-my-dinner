@@ -64,7 +64,7 @@ function PickPopular() {
 
 <div className="row">
   <div className="d-flex justify-content-center">
- <button type="button" className="col-6 btn btn-lg button-flip" onClick={()=>setChoice(Restaraunts[NewRestaraunt()])}>Choose Again</button>
+ <button type="button" className="col-6 btn btn button-flip" onClick={()=>setChoice(Restaraunts[NewRestaraunt()])}>Choose Again</button>
  
  </div>
  </div>
