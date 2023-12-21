@@ -12,7 +12,7 @@ function Header(){
     return(
 
     
-    <div>
+    <div className="pb-2">
     
     <div className="bg-dark bg-gradient text-white p-4">
     

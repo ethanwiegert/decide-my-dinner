@@ -3,6 +3,7 @@ import './App.css';
 import { Link, useHistory } from "react-router-dom";
 
 import Header from './Header';
+import Footer from './Footer';
 
 //Buffalo Wild Wings, McDonalds, Taco Bell, Shake Shack, Chipotle
 
@@ -47,7 +48,7 @@ function PickPopular() {
     
 
      
-    <div className="row pt-3">
+    <div className="row p-4">
     <div className="d-flex justify-content-center pb-3">
  <h3>Tonight is: {choice}!</h3>
  </div>
@@ -69,7 +70,7 @@ function PickPopular() {
  </div>
  </div>
 
-
+<Footer />
  </div>
   )
 }

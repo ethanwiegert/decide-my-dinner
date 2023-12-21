@@ -2,6 +2,7 @@ import React from "react";
 import {useState} from "react"
 import {useHistory} from "react-router-dom"
 import Header from "./Header";
+import Footer from "./Footer";
 
 
 function UseMyList(){
@@ -47,8 +48,8 @@ function UseMyList(){
     <Header/>
     
     
-    <div className="d-flex justify-content-center pt-3">
-        <h2>Add restaurants</h2>
+    <div className="d-flex justify-content-center p-4">
+        <h2>Add Restaurants</h2>
     </div>
 
     <div className="d-flex justify-content-center pt-1">
@@ -120,7 +121,7 @@ function UseMyList(){
      <br/>
 
     
-
+<Footer />
  </div>
 //conditionally render chosen restaurant
 

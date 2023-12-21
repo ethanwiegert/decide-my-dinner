@@ -3,8 +3,7 @@ import './App.css';
 import { Link, useHistory } from "react-router-dom";
 
 import Header from './Header';
-import UseMyList from './UseMyList';
-import PickPopular from './PickPopular';
+import Footer from './Footer';
 function Home(){
     return(
 
@@ -30,8 +29,9 @@ function Home(){
 
 
 
-
+<Footer />
         </div>
+       
         
     )
 }
