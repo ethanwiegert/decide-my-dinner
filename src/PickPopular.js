@@ -11,16 +11,18 @@ import Footer from './Footer';
 
 
 const Restaraunts=[
-  "Starbucks", 
-  "McDonalds",
-  "Subway",
-  "Burger King",
-  "Taco Bell",
-  "Wendy's",
-  "Dunkin' Donuts",
-  "Chick-fil-A",
+  "Chick-fil-A", 
+  "Jimmy John's",
+  "KFC",
+  "Papa Johns",
+  "Starbucks",
   "Domino's",
-  "Pizza Hut"
+  "Pizza Hut",
+  "Arby's",
+  "Dunkin' Donuts",
+  "Panda Express",
+  "Burger King",
+  "Subway"
 ]
 
 function getRandomInt(max) {
