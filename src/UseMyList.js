@@ -121,7 +121,7 @@ function UseMyList(){
      <br/>
 
     
-<Footer />
+
  </div>
 //conditionally render chosen restaurant
 
