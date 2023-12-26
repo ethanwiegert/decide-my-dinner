@@ -17,7 +17,7 @@ function Home(){
 <div className="p-4">
 
 <h5>Pick Popular</h5>
-<p>Uses a generated list of the top restaraunts with the highest customer satisfaction in 2023 based on the American Customer Satisfaction Index.</p>
+<p>Uses a generated list of the top restaraunts with the highest customer satisfaction in 2023 based on the <a href="https://theacsi.org/industries/restaurant/fast-food-restaurants/">American Customer Satisfaction Index</a>.</p>
 <h5>Use My List</h5>
 <p>Helps you choose based on restaraunts you want.</p>
 <h5>Find My Dinner</h5>
