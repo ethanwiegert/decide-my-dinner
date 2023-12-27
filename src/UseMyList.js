@@ -119,8 +119,9 @@ function UseMyList(){
      <h4 id="result">{restaurant}</h4>
      </div>
      <br/>
-
-    
+    <div className="mt-5 pt-5">
+    <Footer/>
+    </div>
 
  </div>
 //conditionally render chosen restaurant

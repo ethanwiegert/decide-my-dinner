@@ -3,6 +3,8 @@ import React from "react";
 
 function Footer() {
     return (
+      <div>
+      <div className="b-example-divider"></div>
         <div className="fixed-bottom">
           <footer className="footer mt-5 py-3 bg-light">
             <div className="container">
@@ -10,6 +12,7 @@ function Footer() {
                   <span className="text-muted">Created by Ethan Wiegert</span>
             </div>
           </footer>
+        </div>
         </div>
          
     );
