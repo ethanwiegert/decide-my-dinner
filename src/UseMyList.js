@@ -119,7 +119,7 @@ function UseMyList(){
      <h4 id="result">{restaurant}</h4>
      </div>
      <br/>
-    <div className="mt-5 pt-5">
+    <div className="mt-5">
     <Footer/>
     </div>
 
