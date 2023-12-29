@@ -9,7 +9,7 @@ function Footer() {
           <footer className="footer mt-5 py-3 bg-light">
             <div className="container">
               
-                  <span className="text-muted">Created by Ethan Wiegert</span>
+                  <span className="text-muted">Created by Ethan Wiegert <a href="https://github.com/ethanwiegert">GitHub</a></span>
             </div>
           </footer>
         </div>
