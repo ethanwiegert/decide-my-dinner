@@ -10,13 +10,13 @@ import OpenAI from "openai"
 
 function FindMyDinner(){
     const openai = new OpenAI({
-        apiKey: `process.env.REACT_APP_API_KEY`,
+        apiKey: process.env.REACT_APP_API_KEY,
         dangerouslyAllowBrowser: true,
       });
 
 
     const [location, setLocation] = useState('');
-    const [response, setResponse] = useState('')
+    const [response, setResponse] = useState(null)
 
     function handleChange({target}){
       setLocation(target.value)
@@ -37,12 +37,13 @@ async function handleSubmit(event) {
         }
     ],
     temperature: 0.8,
-    max_tokens: 150,
+    max_tokens: 250,
     top_p: 1,
   });
-
-  setResponse(completion)
-  console.log(response)
+let text=completion.choices[0].message.content
+  setResponse(text)
+  console.log("request object", completion)
+  console.log("request text", text)
 }
 
 
