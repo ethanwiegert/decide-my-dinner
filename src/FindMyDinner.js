@@ -28,12 +28,8 @@ async function handleSubmit(event) {
     model: "gpt-3.5-turbo",
     messages: [
       {
-          "role": "system",
-          "content": "Create a list with clickable links of the top 5 rated restaurants in location provided and include their cuisine style."
-        },
-      {
           "role": "user",
-          "content": `location: ${location}`
+          "content": `Create a list with clickable links of the top 5 rated restaurants in ${location} and include their cuisine style.`
         }
     ],
     temperature: 0.8,
@@ -41,6 +37,7 @@ async function handleSubmit(event) {
     top_p: 1,
   });
 let text=completion.choices[0].message.content
+let restaurants=text.split(")")
   setResponse(text)
   console.log("request object", completion)
   console.log("request text", text)
