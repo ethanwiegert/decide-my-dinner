@@ -25,11 +25,11 @@ function FindMyDinner(){
 async function handleSubmit(event) {
   event.preventDefault()
   const completion = await openai.chat.completions.create({
-    model: "gpt-3.5-turbo",
+    model: "gpt-3.5-turbo-1106",
     messages: [
       {
           "role": "user",
-          "content": `Create a list with clickable links of the top 5 rated restaurants in ${location} and include their cuisine style.`
+          "content": `Create a list with clickable links of the top 5 rated restaurants in ${location} and include their cuisine style.  Format the response as an html ordered list.`
         }
     ],
     temperature: 0.8,
@@ -37,11 +37,10 @@ async function handleSubmit(event) {
     top_p: 1,
   });
 let text=completion.choices[0].message.content
-let restaurants=text.split(")")
-  setResponse(text)
-  console.log("request object", completion)
-  console.log("request text", text)
+setResponse({__html: `${text}`})
 }
+
+
 
 
 
@@ -84,8 +83,8 @@ return(
 
         
 
-        <div className="d-flex justify-content-center pt-5">
-        <h3 id="result">{response}</h3>
+        <div dangerouslySetInnerHTML={response} className="d-flex justify-content-center py-5">
+     
        
         </div>
         
