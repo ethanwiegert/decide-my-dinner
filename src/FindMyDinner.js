@@ -16,7 +16,7 @@ function FindMyDinner(){
 
 
     const [location, setLocation] = useState('');
-    const [response, setResponse] = useState(null)
+    const [response, setResponse] = useState('')
 
     function handleChange({target}){
       setLocation(target.value)
@@ -33,7 +33,7 @@ async function handleSubmit(event) {
         }
     ],
     temperature: 0.8,
-    max_tokens: 250,
+    max_tokens: 300,
     top_p: 1,
   });
 let text=completion.choices[0].message.content
@@ -56,7 +56,7 @@ return(
         </div>
 
         <div className="d-flex justify-content-center pt-2">
-        <p>(At least city or town for most accurate results)</p>
+        <p>(Enter a city or town for most accurate results)</p>
         </div>
         
 
@@ -70,11 +70,12 @@ return(
         <form onSubmit={handleSubmit}>
         <input id="location"
           value={location}
+          maxLength="25"
           onChange={handleChange}
         />
         <div className="row">
         <div className="d-flex justify-content-center pt-5">
-        <button id="submit" name="submit" type="submit button" className="col-6 btn btn-lg button-flip">Find Restaurants</button>
+        <button id="submit" name="submit" type="submit button" className="col-6 btn btn-lg button-flip">Search</button>
         </div>
         </div>
  </form>
@@ -83,10 +84,10 @@ return(
 
         
 
-        <div dangerouslySetInnerHTML={response} className="d-flex justify-content-center py-5">
+        {response.length<1 ? null : (<div dangerouslySetInnerHTML={response} className="d-flex justify-content-center py-5"></div>) }
      
        
-        </div>
+        
         
 
         </div>
