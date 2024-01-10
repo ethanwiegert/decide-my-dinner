@@ -15,8 +15,9 @@ function FindMyDinner(){
       });
 
 
-    const [location, setLocation] = useState('');
+    const [location, setLocation] = useState('')
     const [response, setResponse] = useState('')
+    const [loading, setLoading] = useState(false)
 
     function handleChange({target}){
       setLocation(target.value)
@@ -24,6 +25,8 @@ function FindMyDinner(){
 
 async function handleSubmit(event) {
   event.preventDefault()
+  setResponse('')
+  setLoading(true)
   const completion = await openai.chat.completions.create({
     model: "gpt-3.5-turbo-1106",
     messages: [
@@ -36,6 +39,7 @@ async function handleSubmit(event) {
     max_tokens: 300,
     top_p: 1,
   });
+  setLoading(false)
 let text=completion.choices[0].message.content
 setResponse({__html: `${text}`})
 }
@@ -82,7 +86,13 @@ return(
         
         </div>
 
-        
+        {loading===true ? (
+        <div class="d-flex justify-content-center">
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>) : null
+        }
 
         {response.length<1 ? null : (<div dangerouslySetInnerHTML={response} className="d-flex justify-content-center py-5"></div>) }
      
