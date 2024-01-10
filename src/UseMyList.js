@@ -64,6 +64,7 @@ function UseMyList(){
         <input className="m-2 p-2"
           value={name}
           onChange={e => setName(e.target.value)}
+          maxLength="15"
         />
         <button className="btn btn-success p-2 m-2" onClick={() => {
             
