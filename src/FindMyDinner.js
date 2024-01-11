@@ -5,6 +5,7 @@ import {useState} from "react";
 import Header from './Header';
 
 import OpenAI from "openai"
+import DOMPurify from 'dompurify'
 
 
 
@@ -27,6 +28,15 @@ async function handleSubmit(event) {
   event.preventDefault()
   setResponse('')
   setLoading(true)
+  const checkFields = await openai.moderations.create({
+    input:`Create a list with clickable links of the top 5 rated restaurants in ${location} and include their cuisine style.  Format the response as an html ordered list.`
+  })
+  if(checkFields.results[0].flagged===true){
+    console.log("error thrown")
+    throw "This violates the usage policies of open AI"
+  }
+
+
   const completion = await openai.chat.completions.create({
     model: "gpt-3.5-turbo-1106",
     messages: [
@@ -41,7 +51,8 @@ async function handleSubmit(event) {
   });
   setLoading(false)
 let text=completion.choices[0].message.content
-setResponse({__html: `${text}`})
+const clean = DOMPurify.sanitize(text);
+setResponse({__html: `${clean}`})
 }
 
 
