@@ -3,6 +3,7 @@ import './App.css';
 import {useState} from "react";
 
 import Header from './Header';
+import ErrorAlert from './DisplayError';
 
 import OpenAI from "openai"
 import DOMPurify from 'dompurify'
@@ -19,24 +20,31 @@ function FindMyDinner(){
     const [location, setLocation] = useState('')
     const [response, setResponse] = useState('')
     const [loading, setLoading] = useState(false)
+    const [requestError, setRequestError] = useState(null)
+    const [moderation, setModeration] = useState('')
 
     function handleChange({target}){
       setLocation(target.value)
     }
 
 async function handleSubmit(event) {
+  
   event.preventDefault()
   setResponse('')
-  setLoading(true)
+  setRequestError(null)
+  setModeration('')
+  
   const checkFields = await openai.moderations.create({
     input:`Create a list with clickable links of the top 5 rated restaurants in ${location} and include their cuisine style.  Format the response as an html ordered list.`
   })
   if(checkFields.results[0].flagged===true){
-    console.log("error thrown")
-    throw "This violates the usage policies of open AI"
+    let error="This violates the usage policies of open AI."
+    setModeration(error)
+    throw error;
   }
+  setLoading(true)
 
-
+  try{
   const completion = await openai.chat.completions.create({
     model: "gpt-3.5-turbo-1106",
     messages: [
@@ -50,9 +58,12 @@ async function handleSubmit(event) {
     top_p: 1,
   });
   setLoading(false)
-let text=completion.choices[0].message.content
-const clean = DOMPurify.sanitize(text);
-setResponse({__html: `${clean}`})
+  let text=completion.choices[0].message.content
+  const clean = DOMPurify.sanitize(text);
+  setResponse({__html: `${clean}`})
+  } catch(e){
+  setRequestError(e)
+  }
 }
 
 
@@ -96,6 +107,8 @@ return(
  </form>
         
         </div>
+        {moderation.length ? <div className="alert alert-danger m-2">{moderation}</div>:null}
+        <ErrorAlert error={requestError} />
 
         {loading===true ? (
         <div class="d-flex justify-content-center">
