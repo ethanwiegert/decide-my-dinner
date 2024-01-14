@@ -46,16 +46,18 @@ async function handleSubmit(event) {
 
   try{
   const completion = await openai.chat.completions.create({
-    model: "gpt-3.5-turbo-1106",
+    model: "gpt-3.5-turbo",
     messages: [
       {
           "role": "user",
-          "content": `Create a list with clickable links of the top 5 rated restaurants in ${location} and include their cuisine style.  Format the response as an html ordered list.`
+          "content": `Create a list of the top 5 rated restaurants in ${location} with clickable links that open to a search of that restaurant on google and include their cuisine style.  Format the response as an html ordered list.`
         }
     ],
-    temperature: 0.8,
-    max_tokens: 300,
-    top_p: 1,
+    temperature:1,
+    max_tokens:300,
+    top_p:1,
+    frequency_penalty:0,
+    presence_penalty:0
   });
   setLoading(false)
   let text=completion.choices[0].message.content
@@ -82,11 +84,12 @@ return(
         </div>
 
         <div className="d-flex justify-content-center pt-2">
-        <p>(Enter a city or town for most accurate results)</p>
+        <p>Enter a city or town for most accurate results</p>
         </div>
-        
 
-        
+        <div className="d-flex justify-content-center">
+        <p>If you are entering a common city name, please include the state for more specific results.</p>
+        </div>
             
 
             <div className="d-flex justify-content-center pb-5 pt-4">

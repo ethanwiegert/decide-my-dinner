@@ -21,7 +21,7 @@ function Home(){
 <h5>Use My List</h5>
 <p>Helps you choose based on restaraunts you want.</p>
 <h5>Find My Dinner</h5>
-<p>Generates a list based on your desired location (in development).</p>
+<p>Generates a list based on your desired location.</p>
 
 </div>
 
