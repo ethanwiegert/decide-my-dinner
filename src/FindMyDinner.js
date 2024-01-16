@@ -87,8 +87,8 @@ return(
         <p>Enter a city or town for most accurate results</p>
         </div>
 
-        <div className="d-flex justify-content-center">
-        <p>If you are entering a common city name, please include the state for more specific results.</p>
+        <div className="d-flex justify-content-center mx-5">
+        <p className='text-center'>If you are entering a common city name, please include the state.</p>
         </div>
             
 
