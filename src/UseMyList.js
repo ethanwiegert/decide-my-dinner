@@ -3,6 +3,7 @@ import {useState} from "react"
 import {useHistory} from "react-router-dom"
 import Header from "./Header";
 import Footer from "./Footer";
+import { motion } from "framer-motion"
 
 
 function UseMyList(){
@@ -89,6 +90,11 @@ function UseMyList(){
         {list.map(item => (
             
             <div className="row d-flex justify-content-center">
+          <motion.div
+           initial={{opacity:0}}
+           animate={{opacity:1}}
+           transition={{duration:1}}
+           >
         <div className="col-6">
           <p>
             {item.name}{' '}
@@ -109,6 +115,7 @@ function UseMyList(){
             </button>
            
             </div>
+            </motion.div>
           </div>
            
         ))}
@@ -132,10 +139,10 @@ function UseMyList(){
     </div>
 
  </div>
-//conditionally render chosen restaurant
+
 
       
-    );
+ );
 
 
     
