@@ -2,20 +2,22 @@ import React from 'react';
 import './App.css';
 import { useHistory } from "react-router-dom";
 import { motion } from "framer-motion"
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
+import ParticleEffect from './ParticleEffect';
 
 
 function Header(){
     const history=useHistory()
 
     return(
-
+      
     
     <div className="pb-2">
     
     <div className="bg-dark bg-gradient text-white p-4">
+
+      <ParticleEffect />
     
- 
     <div className="d-flex justify-content-center">
     
     {history.length<2 ?
