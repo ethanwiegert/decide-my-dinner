@@ -48,12 +48,13 @@ function ParticleEffect(){
                 particles: {
                     color: {
                         value: "#ffffff",
+                        opacity: 0.25,
                     },
                     links: {
                         color: "#ffffff",
                         distance: 150,
                         enable: true,
-                        opacity: 0.5,
+                        opacity: 0.25,
                         width: 1,
                     },
                     move: {
@@ -63,7 +64,7 @@ function ParticleEffect(){
                             default: "bounce",
                         },
                         random: false,
-                        speed: 6,
+                        speed: 7,
                         straight: false,
                     },
                     number: {
@@ -71,7 +72,7 @@ function ParticleEffect(){
                             enable: true,
                             area: 800,
                         },
-                        value: 80,
+                        value: 90,
                     },
                     opacity: {
                         value: 0.5,

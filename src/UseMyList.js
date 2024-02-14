@@ -135,7 +135,7 @@ function UseMyList(){
      </div>
      <br/>
     <div className="mt-5">
-    <Footer/>
+
     </div>
 
  </div>

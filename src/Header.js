@@ -3,7 +3,7 @@ import './App.css';
 import { useHistory } from "react-router-dom";
 import { motion } from "framer-motion"
 import { Navbar, Nav } from 'react-bootstrap';
-import ParticleEffect from './ParticleEffect';
+
 
 
 function Header(){
@@ -16,7 +16,6 @@ function Header(){
     
     <div className="bg-dark bg-gradient text-white p-4">
 
-      <ParticleEffect />
     
     <div className="d-flex justify-content-center">
     
@@ -48,7 +47,7 @@ function Header(){
     
     </div>
 
-<div className="row bg-light px-5">
+<div className="row bg-secondary bg-gradient px-5">
 
     <Navbar style={{ color: 'black' }} collapseOnSelect expand="lg">
       <Navbar.Brand href="/">

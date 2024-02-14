@@ -72,7 +72,7 @@ function PickPopular() {
  </div>
  </div>
 
-<Footer />
+
  </div>
   )
 }
