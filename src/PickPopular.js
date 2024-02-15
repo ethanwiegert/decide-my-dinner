@@ -1,11 +1,10 @@
 import {React, useState} from 'react';
 import './App.css';
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import Header from './Header';
-import Footer from './Footer';
 
-//Buffalo Wild Wings, McDonalds, Taco Bell, Shake Shack, Chipotle
+
 
 
 
