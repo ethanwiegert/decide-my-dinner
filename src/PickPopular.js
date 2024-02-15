@@ -34,45 +34,35 @@ function NewRestaraunt(){
 
 
 function PickPopular() {
- 
-
   const history=useHistory()
-  const [choice, setChoice]=useState(Restaraunts[NewRestaraunt()])
+  const [choice, setChoice]=useState(null)
   
-  return(
-
-    <div>
-      <div>
-    
-   <Header/>
-    </div>
-    
-
-     
-    <div className="row p-4">
+return(
+<div>
+  <div>
+    <Header/>
+  </div>
+  <div className="row p-4">
     <div className="d-flex justify-content-center pb-3">
- <h3>Tonight is: {choice}!</h3>
- </div>
- </div>
+      {choice===null ? null : <h3>Tonight is: {choice}!</h3>}
+    </div>
+  </div>
 
- <div className="row">
-  <div className="d-flex justify-content-center pt-3">
-   
- <p>Not what you were hoping?</p>
- </div>
- </div>
-<br/>
-<br/>
+  <div className="row">
+    <div className="d-flex justify-content-center pt-3">
+      {choice===null ? null :<p>Not what you were hoping?</p>}
+    </div>
+  </div>
+  <br/>
+  <br/>
 
-<div className="row">
-  <div className="d-flex justify-content-center">
- <button type="button" className="col-6 btn btn button-flip" onClick={()=>setChoice(Restaraunts[NewRestaraunt()])}>Choose Again</button>
- 
- </div>
- </div>
-
-
- </div>
+  <div className="row">
+    <div className="d-flex justify-content-center">
+      {choice ===null ? <button type="button" className="col-6 btn btn button-flip" onClick={()=>setChoice(Restaraunts[NewRestaraunt()])}>Choose</button> : 
+      <button type="button" className="col-6 btn btn button-flip" onClick={()=>setChoice(Restaraunts[NewRestaraunt()])}>Choose Again</button>}
+    </div>
+  </div>
+</div>
   )
 }
 
