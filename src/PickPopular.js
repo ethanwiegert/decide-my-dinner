@@ -58,7 +58,7 @@ return(
 
   <div className="row">
     <div className="d-flex justify-content-center">
-      {choice ===null ? <button type="button" className="col-6 btn btn button-flip" onClick={()=>setChoice(Restaraunts[NewRestaraunt()])}>Choose</button> : 
+      {choice ===null ? <button type="button" className="col-6 btn btn button-flip" onClick={()=>setChoice(Restaraunts[NewRestaraunt()])}>Generate Restaurant</button> : 
       <button type="button" className="col-6 btn btn button-flip" onClick={()=>setChoice(Restaraunts[NewRestaraunt()])}>Choose Again</button>}
     </div>
   </div>

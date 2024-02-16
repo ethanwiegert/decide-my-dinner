@@ -5,7 +5,7 @@ function Footer() {
     return (
       <div>
         
-          <footer className="bg-light fixed-bottom p-3"> 
+          <footer className="bg-secondary fixed-bottom p-3"> 
                   <p className="text-muted">Created by Ethan Wiegert 
                   <a className="mx-3" href="https://github.com/ethanwiegert">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="secondary" class="bi bi-github" viewBox="0 0 16 16">
