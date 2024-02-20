@@ -7,7 +7,7 @@ import Footer from './Footer';
 function Home(){
     return(
 
-<div id="root" className="bg-dark bg-gradient mh-100">
+<div id="root" className="bg-dark bg-gradient mh-100" style={{fontFamily: 'Roboto Condensed, sans-serif' }}>
 
 <ParticleEffect />
 

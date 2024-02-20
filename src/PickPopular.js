@@ -42,7 +42,7 @@ return(
   <div>
     <Header/>
   </div>
-  <div className="row p-4">
+  <div className="row p-4" style={{fontFamily: 'Roboto Condensed, sans-serif' }}>
     <div className="d-flex justify-content-center pb-3">
       {choice===null ? null : <h3>Tonight is: {choice}!</h3>}
     </div>

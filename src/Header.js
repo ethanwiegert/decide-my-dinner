@@ -12,7 +12,7 @@ function Header(){
     return(
       
     
-    <div className="pb-2">
+    <div className="pb-2" style={{fontFamily: 'Roboto Condensed, sans-serif' }}>
     
     <div className="bg-dark bg-gradient text-white p-4">
 
@@ -25,9 +25,9 @@ function Header(){
           animate={{opacity:1, y:0}}
           transition={{duration:2}}
          >
-    <h1>Decide Dinner</h1>
+    <h1 >Decide Dinner</h1>
     </motion.div> :
-    <h1>Decide Dinner</h1>}
+    <h1 >Decide Dinner</h1>}
 
     </div>
 

@@ -74,7 +74,7 @@ async function handleSubmit(event) {
 
 
 return(
-    <div>
+    <div style={{fontFamily: 'Roboto Condensed, sans-serif' }}>
         <Header/>
 
         <div>

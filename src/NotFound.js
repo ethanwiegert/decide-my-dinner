@@ -4,7 +4,7 @@ import Header from './Header';
 
 function NotFound(){
     return(
-        <div>
+        <div style={{fontFamily: 'Roboto Condensed, sans-serif' }}>
             <div>
             <Header/>
             </div>
