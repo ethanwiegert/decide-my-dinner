@@ -34,14 +34,16 @@ function NewRestaraunt(){
 
 
 function PickPopular() {
-  const history=useHistory()
+
   const [choice, setChoice]=useState(null)
   
 return(
 <div>
+
   <div>
     <Header/>
   </div>
+
   <div className="row p-4" style={{fontFamily: 'Roboto Condensed, sans-serif' }}>
     <div className="d-flex justify-content-center pb-3">
       {choice===null ? null : <h3>Tonight is: {choice}!</h3>}
@@ -53,6 +55,7 @@ return(
       {choice===null ? null :<p>Not what you were hoping?</p>}
     </div>
   </div>
+  
   <br/>
   <br/>
 
