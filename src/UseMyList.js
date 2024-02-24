@@ -1,11 +1,10 @@
 import React from "react";
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
 import Header from "./Header";
 import { motion } from "framer-motion";
 
 function UseMyList() {
-  const history = useHistory();
+
 
   const [name, setName] = useState("");
   const [list, setList] = useState([]);
