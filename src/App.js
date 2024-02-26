@@ -7,6 +7,7 @@ import Home from "./Home";
 import UseMyList from "./UseMyList";
 import FindMyDinner from "./FindMyDinner";
 import NotFound from "./NotFound";
+import About from "./About";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route path="/find-my-dinner">
             <FindMyDinner />
+          </Route>
+          <Route path="/about">
+            <About />
           </Route>
           <Route exact path="/">
             <Home />

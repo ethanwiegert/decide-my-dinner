@@ -17,7 +17,7 @@ function Home() {
       <Header />
 
       <div className="p-4 pb-5 text-white">
-        <h5>Pick Popular</h5>
+        <h3>Pick Popular</h3>
         <p>
           Uses a generated list of the top restaraunts with the highest customer
           satisfaction in 2023 based on the{" "}
@@ -26,9 +26,9 @@ function Home() {
           </a>
           .
         </p>
-        <h5>Use My List</h5>
+        <h3>Use My List</h3>
         <p>Helps you choose based on restaraunts you want.</p>
-        <h5>Find My Dinner</h5>
+        <h3>Find My Dinner</h3>
         <p>Generates a list based on your desired location.</p>
       </div>
 
