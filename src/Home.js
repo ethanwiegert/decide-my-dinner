@@ -1,11 +1,13 @@
-import React from "react";
+import { React, useState } from "react";
 import "./App.css";
 import ParticleEffect from "./ParticleEffect";
 
 import Header from "./Header";
-import Footer from "./Footer";
+
 
 function Home() {
+    const [displayOptions, setDisplayOptions] = useState(false)
+
   return (
     <div
       id="root"
@@ -32,7 +34,7 @@ function Home() {
         <p>Generates a list based on your desired location.</p>
       </div>
 
-      <Footer />
+   
     </div>
   );
 }
