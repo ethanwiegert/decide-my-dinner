@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import Header from "./Header";
+import Footer from "./Footer";
 import { motion } from "framer-motion";
 
 function UseMyList() {
@@ -106,7 +107,7 @@ function UseMyList() {
 
           <br />
 
-          <div className="d-flex justify-content-center">
+          <div className="d-flex justify-content-center pb-5">
             {list.length >= 2 ? (
               <button
                 type="submit button"
@@ -130,6 +131,7 @@ function UseMyList() {
       <br />
 
       <div className="mt-5"></div>
+      <Footer/>
     </div>
   );
 }

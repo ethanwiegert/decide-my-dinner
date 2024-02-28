@@ -1,8 +1,10 @@
 import { React, useState } from "react";
 import "./App.css";
 import ParticleEffect from "./ParticleEffect";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 import Header from "./Header";
+import Footer from "./Footer";
 
 
 function Home() {
@@ -19,22 +21,21 @@ function Home() {
       <Header />
 
       <div className="p-4 pb-5 text-white">
-        <h3>Pick Popular</h3>
+        <Link to="/pick-popular"><h3>Pick Popular</h3></Link>
         <p>
           Uses a generated list of the top restaraunts with the highest customer
           satisfaction in 2023 based on the{" "}
           <a href="https://theacsi.org/industries/restaurant/fast-food-restaurants/">
             American Customer Satisfaction Index
           </a>
-          .
         </p>
-        <h3>Use My List</h3>
+        <Link to="use-my-list"><h3>Use My List</h3></Link>
         <p>Helps you choose based on restaraunts you want.</p>
-        <h3>Find My Dinner</h3>
+        <Link to="find-my-dinner"><h3>Find My Dinner</h3></Link>
         <p>Generates a list based on your desired location.</p>
       </div>
 
-   
+   <Footer />
     </div>
   );
 }

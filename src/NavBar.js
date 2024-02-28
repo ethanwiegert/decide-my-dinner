@@ -26,7 +26,6 @@ function NavBar(){
               <Nav.Link href="/pick-popular">Pick Popular</Nav.Link>
               <Nav.Link href="/use-my-list">Use My List</Nav.Link>
               <Nav.Link href="/find-my-dinner">Find My Dinner</Nav.Link>
-              <Nav.Link href="/about">About</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

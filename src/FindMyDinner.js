@@ -3,6 +3,7 @@ import "./App.css";
 import { useState } from "react";
 
 import Header from "./Header";
+import Footer from "./Footer";
 import ErrorAlert from "./DisplayError";
 
 import OpenAI from "openai";
@@ -124,6 +125,9 @@ function FindMyDinner() {
             className="d-flex justify-content-center py-5"
           ></div>
         )}
+      </div>
+      <div className="pt-5">
+      <Footer/>
       </div>
     </div>
   );

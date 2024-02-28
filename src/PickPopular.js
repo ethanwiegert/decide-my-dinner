@@ -2,6 +2,7 @@ import { React, useState } from "react";
 import "./App.css";
 
 import Header from "./Header";
+import Footer from "./Footer";
 
 const Restaraunts = [
   "Chick-fil-A",
@@ -74,6 +75,7 @@ function PickPopular() {
           )}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
