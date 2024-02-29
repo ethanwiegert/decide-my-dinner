@@ -4,7 +4,6 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Route, Switch } from "react-router-dom";
 import store from './app/store'
 import { Provider } from 'react-redux'
-import { Analytics } from '@vercel/analytics/react';
 
 import PickPopular from "./PickPopular";
 import Home from "./Home";
@@ -16,7 +15,7 @@ import About from "./About";
 function App() {
   return (
     <>
-    <Analytics />
+
     <Provider store={store}>
       <Router>
         <Switch>
