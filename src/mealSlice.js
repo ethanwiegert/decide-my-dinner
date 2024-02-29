@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 export const mealSlice = createSlice({
   name: 'meal',
   initialState: {
-    value: null,
+    value: "",
   },
   reducers: {
     setDinner: (state) => {

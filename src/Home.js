@@ -1,15 +1,23 @@
-import { React, useState } from "react";
+import { React } from "react";
+import { useSelector, useDispatch } from 'react-redux';
 import "./App.css";
 import ParticleEffect from "./ParticleEffect";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
+
+import {
+  setBreakfast,
+  setLunch,
+  setDinner,
+  selectMeal,
+} from './mealSlice';
 
 import Header from "./Header";
 import Footer from "./Footer";
 
 
 function Home() {
-    const [displayOptions, setDisplayOptions] = useState(false)
-
+    const meal = useSelector(selectMeal)
+    const dispatch = useDispatch();
   return (
     <div
       id="root"
@@ -21,18 +29,58 @@ function Home() {
       <Header />
 
       <div className="p-4 pb-5 text-white">
-        <Link to="/pick-popular"><h3>Pick Popular</h3></Link>
-        <p>
-          Uses a generated list of the top restaraunts with the highest customer
-          satisfaction in 2023 based on the{" "}
-          <a href="https://theacsi.org/industries/restaurant/fast-food-restaurants/">
-            American Customer Satisfaction Index
-          </a>
-        </p>
-        <Link to="use-my-list"><h3>Use My List</h3></Link>
-        <p>Helps you choose based on restaraunts you want.</p>
-        <Link to="find-my-dinner"><h3>Find My Dinner</h3></Link>
-        <p>Generates a list based on your desired location.</p>
+        {meal==="" ? 
+        <div>
+        
+        <div className="row d-flex justify-content-center py-4">
+          <h3 className="col-auto">Select your meal:</h3>
+        </div>
+        
+        <div className="row d-flex justify-content-md-evenly flex-md-row align-items-center flex-column pb-4">
+          <button
+          type="button"
+          className="col-3 m-2 btn btn-primary"
+          onClick={() => dispatch(setBreakfast())}
+          >
+          Breakfast
+          </button>
+          <button
+          type="button"
+          className="col-3 m-2 btn btn-primary"
+          onClick={() => dispatch(setLunch())}
+          >
+          Lunch
+          </button>
+          <button
+          type="button"
+          className="col-3 m-2 btn btn-primary"
+          onClick={() => dispatch(setDinner())}
+          >
+          Dinner
+          </button>
+        </div>
+
+        </div>
+        :
+        <div>
+          <div className="row d-flex justify-content-center py-4">
+            <h3 className="col-auto">How would you like to decide?</h3>
+          </div>
+          
+          <div className="row d-flex justify-content-md-evenly flex-md-row align-items-center flex-column pb-4">
+          <Link className="col-3 m-2 btn btn-primary" to="/pick-popular">
+            Fast Food
+          </Link>
+          <Link className="col-3 m-2 btn btn-primary md-btn-lg" to="/use-my-list">
+            My Ideas
+          </Link>
+          <Link className="col-3 m-2 btn btn-primary" to="/find-my-dinner">
+            Highly Recommended
+          </Link>
+            </div>
+        </div>
+            }
+
       </div>
 
    <Footer />
