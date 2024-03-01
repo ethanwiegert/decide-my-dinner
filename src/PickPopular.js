@@ -1,34 +1,48 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import "./App.css";
+import { useSelector } from 'react-redux';
+import { selectMeal } from './mealSlice';
 
 import Header from "./Header";
 import Footer from "./Footer";
 
-const Restaraunts = [
+const other = [
   "Chick-fil-A",
   "Jimmy John's",
   "KFC",
   "Papa Johns",
-  "Starbucks",
   "Domino's",
   "Pizza Hut",
   "Arby's",
-  "Dunkin' Donuts",
   "Panda Express",
   "Burger King",
   "Subway",
 ];
 
+const breakfast= [
+  "Chick-fil-A",
+  "Starbucks",
+  "Dunkin' Donuts",
+]
+
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
-function NewRestaraunt() {
-  return getRandomInt(Restaraunts.length);
-}
-
 function PickPopular() {
   const [choice, setChoice] = useState(null);
+  const [restaurants, setRestaurants] = useState(other)
+  const meal = useSelector(selectMeal)
+
+  function NewRestaraunt() {
+    return getRandomInt(restaurants.length);
+  }
+
+  useEffect(() => {
+    if(meal==="Breakfast"){
+      setRestaurants(breakfast)
+     }
+  }, [meal]);
 
   return (
     <div>
@@ -41,7 +55,7 @@ function PickPopular() {
         style={{ fontFamily: "Roboto Condensed, sans-serif" }}
       >
         <div className="d-flex justify-content-center pb-3">
-          {choice === null ? null : <h3>Tonight is: {choice}!</h3>}
+          {choice === null ? <h3>Press to choose {meal}:</h3> : <h3>{meal} is: {choice}!</h3>}
         </div>
       </div>
 
@@ -58,9 +72,9 @@ function PickPopular() {
         <div className="d-flex justify-content-center">
           {choice === null ? (
             <button
-              type="button"
+              type="submit button"
               className="col-6 btn btn button-flip"
-              onClick={() => setChoice(Restaraunts[NewRestaraunt()])}
+              onClick={() => setChoice(restaurants[NewRestaraunt()])}
             >
               Generate Restaurant
             </button>
@@ -68,7 +82,7 @@ function PickPopular() {
             <button
               type="button"
               className="col-6 btn btn button-flip"
-              onClick={() => setChoice(Restaraunts[NewRestaraunt()])}
+              onClick={() => setChoice(restaurants[NewRestaraunt()])}
             >
               Choose Again
             </button>

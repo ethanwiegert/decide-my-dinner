@@ -7,13 +7,13 @@ export const mealSlice = createSlice({
   },
   reducers: {
     setDinner: (state) => {
-      state.value = "dinner"
+      state.value = "Dinner"
     },
     setLunch: (state) => {
-      state.value = "lunch"
+      state.value = "Lunch"
     },
     setBreakfast: (state) => {
-      state.value= "breakfast"
+      state.value= "Breakfast"
     },
   },
 })

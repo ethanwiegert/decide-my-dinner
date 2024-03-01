@@ -1,6 +1,8 @@
 import React from "react";
 import "./App.css";
 import { useState } from "react";
+import { useSelector } from 'react-redux';
+import { selectMeal } from './mealSlice';
 
 import Header from "./Header";
 import Footer from "./Footer";
@@ -20,6 +22,8 @@ function FindMyDinner() {
   const [loading, setLoading] = useState(false);
   const [requestError, setRequestError] = useState(null);
   const [moderation, setModeration] = useState("");
+
+  const meal = useSelector(selectMeal)
 
   function handleChange({ target }) {
     setLocation(target.value);
@@ -71,7 +75,7 @@ function FindMyDinner() {
 
       <div>
         <div className="d-flex justify-content-center pt-3">
-          <h2>Enter a location:</h2>
+          <h4>Enter a location for where you would like to eat {meal}:</h4>
         </div>
 
         <div className="d-flex justify-content-center pt-2">

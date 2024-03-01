@@ -64,7 +64,7 @@ function Home() {
         :
         <div>
           <div className="row d-flex justify-content-center py-4">
-            <h3 className="col-auto">How would you like to decide?</h3>
+            <h3 className="col-auto">How would you like to decide where to eat {meal}?</h3>
           </div>
           
           <div className="row d-flex justify-content-md-evenly flex-md-row align-items-center flex-column pb-4">

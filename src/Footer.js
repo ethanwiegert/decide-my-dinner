@@ -9,7 +9,7 @@ function Footer() {
         style={{ fontFamily: "Roboto Condensed, sans-serif" }}
       >
         <p>
-          To contact me or learn more about this site, click <Link to="/about">here</Link>
+          To contact me or learn more about this site, click <Link className="text-dark" to="/about">here</Link>
         </p>
       </footer>
     </div>

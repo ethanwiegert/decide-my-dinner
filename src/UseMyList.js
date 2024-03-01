@@ -3,6 +3,8 @@ import { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { motion } from "framer-motion";
+import { useSelector } from 'react-redux';
+import { selectMeal } from './mealSlice';
 
 function UseMyList() {
 
@@ -11,6 +13,8 @@ function UseMyList() {
   const [list, setList] = useState([]);
   const [restaurant, setRestaurant] = useState("");
   const [display, setDisplay] = useState(false);
+
+  const meal = useSelector(selectMeal)
 
   function getRandomInt(max) {
     return Math.floor(Math.random() * max);
@@ -33,7 +37,7 @@ function UseMyList() {
       <Header />
 
       <div className="d-flex justify-content-center p-4">
-        <h2>Add Restaurants</h2>
+        <h2>Add Your Ideas for {meal}</h2>
       </div>
 
       <div className="d-flex justify-content-center pt-1">
