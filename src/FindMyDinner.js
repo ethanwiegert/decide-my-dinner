@@ -36,7 +36,7 @@ function FindMyDinner() {
     setModeration("");
 
     const checkFields = await openai.moderations.create({
-      input: `Create a list with clickable links of the top 5 rated restaurants in ${location} and include their cuisine style.  Format the response as an html ordered list.`,
+      input: `Create a list with clickable links of the top 5 rated restaurants to eat ${meal} in ${location} and include their cuisine style.  Format the response as an html ordered list.`,
     });
     if (checkFields.results[0].flagged === true) {
       let error = "This violates the usage policies of open AI.";
@@ -51,7 +51,7 @@ function FindMyDinner() {
         messages: [
           {
             role: "user",
-            content: `Create a list of the top 5 rated restaurants in ${location} with clickable links that open to a search of that restaurant on google and include their cuisine style.  Format the response as an html ordered list.`,
+            content: `Create a list of the top 5 rated restaurants to eat ${meal} in ${location} with clickable links that open to a search of that restaurant on google and include their cuisine style.  Format the response as an html ordered list.`,
           },
         ],
         temperature: 1,

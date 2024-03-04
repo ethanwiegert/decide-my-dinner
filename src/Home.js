@@ -75,7 +75,7 @@ function Home() {
             My Ideas
           </Link>
           <Link className="col-3 m-2 btn btn-primary" to="/find-my-dinner">
-            Highly Recommended
+            Highly Rated
           </Link>
             </div>
         </div>
