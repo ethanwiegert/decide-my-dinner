@@ -21,6 +21,7 @@ function UseMyList() {
   }
 
   const submitHandler = (event) => {
+    
     event.preventDefault();
     if (list.length < 2) {
       setRestaurant("");
@@ -83,7 +84,7 @@ function UseMyList() {
                 transition={{ duration: 1 }}
               >
                 <div className="col-6">
-                  <p>{item.name} </p>
+                  <p>{item.name}</p>
                 </div>
                 <div className="col-6 pb-3">
                   <button
@@ -128,7 +129,7 @@ function UseMyList() {
 
       <br />
 
-      <div className="d-flex justify-content-center">
+      <div className="d-flex justify-content-center pb-5">
         <h4 id="result">{restaurant}</h4>
       </div>
 
