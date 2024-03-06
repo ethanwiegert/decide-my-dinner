@@ -74,7 +74,7 @@ function FindMyDinner() {
       <Header />
 
       <div>
-        <div className="d-flex justify-content-center pt-3">
+        <div className="d-flex justify-content-center m-auto pt-3">
           <h4>Enter a location for where you would like to eat {meal}:</h4>
         </div>
 
