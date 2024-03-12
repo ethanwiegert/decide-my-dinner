@@ -9,7 +9,6 @@ import Footer from "./Footer";
 import ErrorAlert from "./DisplayError";
 
 import OpenAI from "openai";
-import DOMPurify from "dompurify";
 
 function FindMyDinner() {
   const openai = new OpenAI({
@@ -36,7 +35,7 @@ function FindMyDinner() {
     setModeration("");
 
     const checkFields = await openai.moderations.create({
-      input: `Create a list with clickable links of the top 5 rated restaurants to eat ${meal} in ${location} and include their cuisine style.  Format the response as an html ordered list.`,
+      input: `Create a list with clickable links of the top 5 rated restaurants to eat ${meal} in ${location} and include their Style style.  Format the response as an html ordered list.`,
     });
     if (checkFields.results[0].flagged === true) {
       let error = "This violates the usage policies of open AI.";
@@ -48,10 +47,11 @@ function FindMyDinner() {
     try {
       const completion = await openai.chat.completions.create({
         model: "gpt-3.5-turbo",
+        response_format: { "type": "json_object" },
         messages: [
           {
             role: "user",
-            content: `Create a list of the top 5 rated restaurants to eat ${meal} in ${location} with clickable links that open to a search of that restaurant on google and include their cuisine style.  Format the response as an html ordered list.`,
+            content: `Create a list of the top 5 rated restaurants to eat ${meal} in ${location} with clickable links that open to a search of that restaurant on google and include their Style style.  Format the response as an json object named restaurants.`,
           },
         ],
         temperature: 1,
@@ -62,8 +62,7 @@ function FindMyDinner() {
       });
       setLoading(false);
       let text = completion.choices[0].message.content;
-      const clean = DOMPurify.sanitize(text);
-      setResponse({ __html: `${clean}` });
+      setResponse(JSON.parse(text))
     } catch (e) {
       setRequestError(e);
     }
@@ -124,10 +123,15 @@ function FindMyDinner() {
         ) : null}
 
         {response.length < 1 ? null : (
-          <div
-            dangerouslySetInnerHTML={response}
-            className="d-flex justify-content-center py-5"
-          ></div>
+          <div className="d-flex justify-content-center pb-4 m-2">
+            <ol>
+              <li><a href={response.restaurants[0].link} target="_blank" rel="noreferrer">{response.restaurants[0].name}</a> - Style: {response.restaurants[0].cuisine}</li>
+              <li><a href={response.restaurants[1].link} target="_blank" rel="noreferrer">{response.restaurants[1].name}</a> - Style: {response.restaurants[1].cuisine}</li>
+              <li><a href={response.restaurants[2].link} target="_blank" rel="noreferrer">{response.restaurants[2].name}</a> - Style: {response.restaurants[2].cuisine}</li>
+              <li><a href={response.restaurants[3].link} target="_blank" rel="noreferrer">{response.restaurants[3].name}</a> - Style: {response.restaurants[3].cuisine}</li>
+              <li><a href={response.restaurants[4].link} target="_blank" rel="noreferrer">{response.restaurants[4].name}</a> - Style: {response.restaurants[4].cuisine}</li>
+            </ol>
+          </div>
         )}
       </div>
       <div className="pt-5">
