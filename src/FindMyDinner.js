@@ -51,7 +51,7 @@ function FindMyDinner() {
         messages: [
           {
             role: "user",
-            content: `Create a list of the top 5 rated restaurants to eat ${meal} in ${location} with clickable links that open to a search of that restaurant on google and include their Style style.  Format the response as an json object named restaurants.`,
+            content: `Create a list of the top 5 rated restaurants to eat ${meal} in ${location} with clickable links that open to a search of that restaurant on google and include their Style style.  Format the response as an json object named restaurants with categories name, link, and cuisine.`,
           },
         ],
         temperature: 1,
