@@ -48,6 +48,9 @@ function PickPopular() {
     <div>
       <div>
         <Header />
+        <div className="d-flex justify-content-center pb-3">
+          <p>Please note, options are based on restaurants located in the United States</p>
+        </div>
       </div>
 
       <div
